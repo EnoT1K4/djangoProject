@@ -1,0 +1,36 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title%}
+
+    {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<aside>
+    <img src="{% static 'main/img/makima.jpg' %}">
+    <span class="logo"> Sh1ro </span>
+    <h3>Navigation</h3>
+    <ul>
+        <a href="/index"><li> Main</li></a>
+        <a href="/about"><li> About us</li></a>
+        <a href=""><li> Contacts </li> </a>
+    </ul>
+</aside>
+<main>
+    {% block content%}
+
+    {% endblock %}
+</main>
+</body>
+</html>
+
